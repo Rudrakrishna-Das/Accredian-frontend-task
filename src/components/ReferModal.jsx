@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+const back = "https://accredian-backend-task-1-brgg.onrender.com";
 const ReferModal = ({ onClose }) => {
   const [referrerName, setReferrerName] = useState("");
   const [refereeName, setRefereeName] = useState("");
@@ -29,7 +30,7 @@ const ReferModal = ({ onClose }) => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/referrals", {
+      const res = await fetch(`${back}/api/referrals`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
